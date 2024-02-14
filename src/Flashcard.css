@@ -1,0 +1,39 @@
+/* Flashcard.css */
+.flashcard {
+    padding: 6px;
+    width: 280px;
+    height: 160px;
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .flashcard.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front,
+  .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .front {
+    background-color: #09080a;
+    color: #f7f7f7;
+  }
+  
+  .back {
+    background-color: #e7e7e7;
+    color: #09080a;
+    transform: rotateY(180deg); /* Fix the rotation here */
+  }
+  

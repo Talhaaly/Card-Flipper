@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
+// App.js
+import React from 'react';
+import Flashcard from './Flashcard';
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Flashcard question="What language is React based on?" answer="React is based on javaScript." />
+      <Flashcard question="What are the building block of React apps?" answer="Components are the building blocks of React apps." />
+      <Flashcard question="What Syntax is use to describe a UI in React apps?" answer="JSX(javaScript XML)is the syntax used to describe UI in React apps." />
+      <Flashcard question="How to pass data from parent to child component?" answer="Use props for data passing from parent to child in React." />
+      <Flashcard question="How to give components memory?" answer="Use  useState Hook to give components memory." />
+      <Flashcard question="What do we call and input element that is completely synchronised with state?" answer="A controlled input element." />
     </div>
   );
-}
+};
 
 export default App;
+
